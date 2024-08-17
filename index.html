@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="./src/main.js" defer type="module"></script>
+</head>
+<body>
+    <div id="app" class="flex">
+        <div class="left">
+            <section class="timer">
+                <span id="minutes">05</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </section>
+            <section id="controls" class="flex">
+                <button data-action="toggleRunning" class="ph ph-play-circle">
+                    <span class="sr-only">Start timer</span>
+                </button>
+                <button data-action="toggleRunning" class="ph ph-pause-circle">
+                    <span class="sr-only">Pause timer</span>
+                </button>
+                <button data-action="reset" class="ph ph-stop-circle">
+                    <span class="sr-only">Restart Timer</span>
+                </button>
+                <button data-action="addMinutes" class="ph ph-plus-circle">
+                    <span class="sr-only">Add 5 minutes to timer</span>
+                </button>
+                <button data-action="removeMinutes" class="ph ph-minus-circle">
+                    <span class="sr-only">Remove 5 minutes from timer</span>
+                </button>
+            </section>
+        </div>
+        <section id="soundboard" class="soundboard">
+            <button id="forestAudio" data-selectMusic="forest" class="ph ph-tree-evergreen selected">
+                <span class="sr-only">Play forest audio</span>
+            </button>
+            <button id="rainAudio" data-selectMusic="rain" class="ph ph-cloud-rain">
+                <span class="sr-only">Play rain audio</span>
+            </button>
+            <button id="coffeeAudio" data-selectMusic="coffee" class="ph ph-storefront">
+                <span class="sr-only">Play coffee audio</span>
+            </button>
+            <button id="bonfireAudio" data-selectMusic="bonfire" class="ph ph-campfire">
+                <span class="sr-only">Play bonfire audio</span>
+            </button>
+        </section>
+    </div>
+</body>
+</html>
